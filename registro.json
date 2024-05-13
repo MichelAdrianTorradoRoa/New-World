@@ -1,40 +1,30 @@
 {
-    "usuarios":[
-        
+    "usuarios": [
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    ],
-
-    "servicios":[
+            "nombre": "Vanessa",
+            "direccion": "Ciudad: C\u00facuta, Norte de Santandera",
+            "informacion de contacto": 3133338631
+        },
         {
-
-
-
-
-
-
-
-
-
+            "nombre": "Carmen",
+            "direccion": "Barrio:Colpet, Calle 5 AN # 4 - 51, Cucuta",
+            "informacion de contacto": 3163730475
+        },
+        {
+            "nombre": "Juan Mari\u00f1o",
+            "direccion": "Bellavista",
+            "informacion de contacto": 0
+        },
+        {
+            "nombre": "mike",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 1093292711,
+            "direccion": "Lagos II",
+            "correo electronico": "micheltorrado12@gmail.com",
+            "informacion de contacto": 3163730475
         }
+    ],
+    "servicios": [
+        {}
     ]
-
-
 }
