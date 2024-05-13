@@ -1,68 +1,23 @@
 {
     "usuarios": [
-        {},
+        
         {
-            "nombre": "Mike",
+            "nombre": "Carmen",
+            "direccion": "Barrio:Colpet, Calle 5 AN # 4 - 51, Cucuta",
+            "informacion de contacto": 3163730475
+        },
+        {
+            "nombre": "Juan Mari\u00f1o",
+            "direccion": "Bellavista",
+            "informacion de contacto": 0
+        },
+        {
+            "nombre": "mike",
             "tipo del documento de identidad": "CC",
             "numero del documento de identidad": 1093292711,
             "direccion": "Lagos II",
             "correo electronico": "micheltorrado12@gmail.com",
             "informacion de contacto": 3163730475
-        },
-        {
-            "nombre": "Holger",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 13500675,
-            "direccion": "Tibu",
-            "correo electronico": "holger_torrado@gmail.com",
-            "informacion de contacto": 3133338631
-        },
-        {
-            "nombre": "Carmen",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 60361194,
-            "direccion": "Barco",
-            "correo electronico": "vahoma_74@gmail.com",
-            "informacion de contacto": 3042426500
-        },
-        {
-            "nombre": "Holger",
-            "tipo del documento de identidad": "13500675",
-            "informacion de contacto": 3133338631,
-            "direccion": "Tibu",
-            "correo electronico": "holger_torrado@gmail.com"
-        },
-        {
-            "nombre": "Holger",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 13500675,
-            "direccion": "Tibu",
-            "correo electronico": "holger_torrado@gmail.com",
-            "informacion de contacto": 3133338631
-        },
-        {
-            "nombre": "Holger",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 13500675,
-            "direccion": "Tibu",
-            "correo electronico": "holger_torrado@gmail.com",
-            "informacion de contacto": 3133338631
-        },
-        {
-            "nombre": "Holger",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 13500675,
-            "direccion": "tIBU",
-            "correo electronico": "HOLGER_TORRADO@GMAIL.COM",
-            "informacion de contacto": 3133338631
-        },
-        {
-            "nombre": "Jorge",
-            "tipo del documento de identidad": "CC",
-            "numero del documento de identidad": 13500676,
-            "direccion": "vahoma_68@gmail.com",
-            "correo electronico": "Virgilio",
-            "informacion de contacto": 3203045620
         }
     ],
     "servicios": [
