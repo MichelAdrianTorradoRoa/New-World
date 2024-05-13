@@ -55,6 +55,14 @@
             "direccion": "tIBU",
             "correo electronico": "HOLGER_TORRADO@GMAIL.COM",
             "informacion de contacto": 3133338631
+        },
+        {
+            "nombre": "Jorge",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500676,
+            "direccion": "vahoma_68@gmail.com",
+            "correo electronico": "Virgilio",
+            "informacion de contacto": 3203045620
         }
     ],
     "servicios": [
