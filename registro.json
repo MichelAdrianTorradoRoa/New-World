@@ -24,6 +24,37 @@
             "direccion": "Barco",
             "correo electronico": "vahoma_74@gmail.com",
             "informacion de contacto": 3042426500
+        },
+        {
+            "nombre": "Holger",
+            "tipo del documento de identidad": "13500675",
+            "informacion de contacto": 3133338631,
+            "direccion": "Tibu",
+            "correo electronico": "holger_torrado@gmail.com"
+        },
+        {
+            "nombre": "Holger",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "Tibu",
+            "correo electronico": "holger_torrado@gmail.com",
+            "informacion de contacto": 3133338631
+        },
+        {
+            "nombre": "Holger",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "Tibu",
+            "correo electronico": "holger_torrado@gmail.com",
+            "informacion de contacto": 3133338631
+        },
+        {
+            "nombre": "Holger",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "tIBU",
+            "correo electronico": "HOLGER_TORRADO@GMAIL.COM",
+            "informacion de contacto": 3133338631
         }
     ],
     "servicios": [
