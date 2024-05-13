@@ -1,13 +1,12 @@
 {
     "usuarios": [
-        
         {
-            "nombre": "Carmen",
+            "nombre": "Vanessa",
             "direccion": "Barrio:Colpet, Calle 5 AN # 4 - 51, Cucuta",
             "informacion de contacto": 3163730475
         },
         {
-            "nombre": "Juan Mari\u00f1o",
+            "nombre": "Juan Mariño",
             "direccion": "Bellavista",
             "informacion de contacto": 0
         },
@@ -18,6 +17,14 @@
             "direccion": "Lagos II",
             "correo electronico": "micheltorrado12@gmail.com",
             "informacion de contacto": 3163730475
+        },
+        {
+            "nombre": "Jorge",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500676,
+            "direccion": "Cucuta",
+            "correo electronico": "vahoma_68@gmail.com",
+            "informacion de contacto": "3133338631"
         }
     ],
     "servicios": [

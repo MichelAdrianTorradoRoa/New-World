@@ -33,6 +33,7 @@ def actualizar_usarios(datos):
          if datos["usuarios"][i]["nombre"]==nombre2:
             datos["usuarios"][i][dato_cambiar]=nuevo_valor
             print(f"La informacion de {nombre2} ha sido actualizada")
+    return datos        
 
 def eliminar_usuarios(datos):
     datos=dict(datos)
