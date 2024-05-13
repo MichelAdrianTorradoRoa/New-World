@@ -51,10 +51,18 @@
             "direccion": "Floridablanca",
             "correo electronico": "jayo@gmail.com",
             "informacion de contacto": 3053338631
+        },
+        {
+            "nombre": "Gaby",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 1093292745,
+            "direccion": "Lagos I",
+            "correo electronico": "gaby@hotmail.com",
+            "informacion de contacto": 3133338632
         }
     ],
     "servicios": [
-        
         {
             "nombre": "Sservicios Moviles Postpago",
             "precio": 0,
@@ -72,6 +80,12 @@
             "precio": 0,
             "tiempo": "1 mes",
             "detalles": "60 GB"
+        },
+        {
+            "nombre": "Prepago",
+            "tiempo": "1 mes",
+            "detalles": "80 GB",
+            "precio": 80.0
         }
     ]
 }
