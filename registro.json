@@ -1,7 +1,7 @@
 {
     "usuarios": [
         {
-            "nombre": "Juan Mariño",
+            "nombre": "Juan Mari\u00c3\u00b1o",
             "direccion": "Bellavista",
             "informacion de contacto": 0
         },
@@ -29,6 +29,33 @@
             "direccion": "Colsag",
             "correo electronico": "vahoma_50@gmail.com",
             "informacion de contacto": 3133338632
+        },
+        {
+            "nombre": "Juan Mari\u00f1o",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "Florida",
+            "correo electronico": "juan_mari\u00f1o@hotmail.com",
+            "informacion de contacto": 35004569510
+        },
+        {
+            "nombre": "Juan Mari\u00f1o",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "JUAN_MARI\u00d1O@hotmail.com",
+            "correo electronico": "Florida",
+            "informacion de contacto": 3503669987
+        },
+        {
+            "nombre": "Vane",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 50472205,
+            "direccion": "Roma",
+            "correo electronico": "vane@yahoo.es",
+            "informacion de contacto": 3153338631
         }
     ],
     "servicios": [
