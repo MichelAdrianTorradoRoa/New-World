@@ -1,22 +1,32 @@
 {
-
-"usuarios":[
-    {
-
-
-
-
-
-
-        
-    }
-],
-"servicios":[
-{
-
-
-
-
-}
-]
+    "usuarios": [
+        {},
+        {
+            "nombre": "Mike",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 1093292711,
+            "direccion": "Lagos II",
+            "correo electronico": "micheltorrado12@gmail.com",
+            "informacion de contacto": 3163730475
+        },
+        {
+            "nombre": "Holger",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 13500675,
+            "direccion": "Tibu",
+            "correo electronico": "holger_torrado@gmail.com",
+            "informacion de contacto": 3133338631
+        },
+        {
+            "nombre": "Carmen",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 60361194,
+            "direccion": "Barco",
+            "correo electronico": "vahoma_74@gmail.com",
+            "informacion de contacto": 3042426500
+        }
+    ],
+    "servicios": [
+        {}
+    ]
 }
