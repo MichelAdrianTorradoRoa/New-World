@@ -27,10 +27,12 @@ def leer_usuarios(datos):
 def actualizar_usarios(datos):
     datos=dict(datos)
     nombre2= input("Ingrese el nombre del usuario que desea actualizar: ")
+    dato_cambiar=input("Ingrese el dato que desea cambiar: ")
+    nuevo_valor=input("Ingrese el nuevo dato: ")
     for i in range (len(datos["usuarios"])):
-        if (datos["usuarios"][i]["nombre"])==nombre2:
-              dato_cambiar=input("Ingrese el dato que desea cambiar: ")
-              print (len(datos["usuarios"]))   
+         if datos["usuarios"][i]["nombre"]==nombre2:
+            datos["usuarios"][i][dato_cambiar]=nuevo_valor
+            print(f"La informacion de {nombre2} ha sido actualizada")
 
 def eliminar_usuarios(datos):
     datos=dict(datos)

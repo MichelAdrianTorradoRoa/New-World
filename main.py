@@ -20,7 +20,17 @@ while True:
             elif opc==3:
                 datos=actualizar_usarios(datos)
             elif opc==4:
-                datos=eliminar_usuarios(datos)            
+                datos=eliminar_usuarios(datos)
+            elif opc==5:
+                while True:
+                    menu_Asignar_categorias_a_los_usuarios()
+                    opc=pedir_opcion()
+                    if opc==1:
+                        print("opcion 1")
+                    elif opc==4:
+                        print("Salió!!")
+                        break    
+
             elif opc == 10:
                 print("Salió!!")
                 break
