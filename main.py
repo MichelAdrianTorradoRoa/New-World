@@ -1,6 +1,7 @@
 from datos import *
 from menu import *
 from usuarios import *
+from servicios import *
 import unicodedata
 
 BASE_DE_DATOS="registro.json"
@@ -28,13 +29,21 @@ while True:
                     opc=pedir_opcion()
                     if opc==1:
                         datos=cliente_nuevo(datos)
+                    elif opc==2:
+                        datos=cliente_regular(datos)
+                    elif opc==3:
+                        datos=cliente_fiel(datos)         
                     elif opc==4:
                         print("Salió!!")
-                        break    
+                    break
+            elif opc==6:
+                datos=crear_servicio(datos)
+            elif opc==7:
+                datos=crear_servicio(datos)                            
 
             elif opc == 10:
                 print("Salió!!")
-                break
+            break
     
         
             
@@ -46,7 +55,7 @@ while True:
                 datos=crear_perfiles_usuarios(datos)
             elif opc == 3:
                 print("Salió!!")
-                break
+            break
     
 
 
@@ -60,7 +69,7 @@ while True:
                 datos=crear_perfiles_usuarios(datos)
             elif opc == 3:
                 print("Salió!!")
-                break
+            break
     
 
 

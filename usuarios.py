@@ -54,21 +54,11 @@ def eliminar_usuarios(datos):
     print("El usuario no existe")
     return datos        
 
-def eliminar_usuario(datos):
-    datos=dict(datos)
-    nombre2= input("Ingrese el nombre del usuario que desea eliminar: ")
-    for i in range (len(datos["usuarios"])):
-        if datos["usuarios"][i]["nombre"]==nombre2:
-            datos["usuarios"].pop(i)
-            print("Usuario eliminado")
-        return datos
-    print("El usuario no existe")
-    return datos
-     
+
 def cliente_nuevo(datos):
     datos=dict(datos)
-    nombre2=input("Ingrese el nombre del cliente que desea asignarlo como cliente nuevo: ")
-    for i in range (len(datos["usuarios"]["nombre"])):
+    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente nuevo: ")
+    for i in range (len(datos["usuarios"])):
         if datos["usuarios"][i]["nombre"]==nombre2:
             if datos["usuarios"][i]["categoria"]=="Cliente Nuevo":
                 print("El usuario ya es cliente nuevo")
@@ -77,10 +67,33 @@ def cliente_nuevo(datos):
                 datos["usuarios"][i]["categoria"]="Cliente Nuevo"
                 print(f"La informacion de {nombre2} ha sido actualizada")
                 return datos
-        else:
-            print("El usuario no exite")
-        break
     return datos
 
+def cliente_regular(datos):
+    datos=dict(datos)
+    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente regular: ")
+    for i in range (len(datos["usuarios"])):
+        if datos["usuarios"][i]["nombre"]==nombre2:
+            if datos["usuarios"][i]["categoria"]=="Cliente Regular":
+                print("El usuario ya es cliente regular")
+                return datos
+            else:
+                datos["usuarios"][i]["categoria"]="Cliente Regular"
+                print(f"La informacion de {nombre2} ha sido actualizada")
+                return datos
+    return datos
 
+def cliente_fiel(datos):
+    datos=dict(datos)
+    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente fiel: ")
+    for i in range (len(datos["usuarios"])):
+        if datos["usuarios"][i]["nombre"]==nombre2:
+            if datos["usuarios"][i]["categoria"]=="Cliente Fiel":
+                print("El usuario ya es cliente fiel")
+                return datos
+            else:
+                datos["usuarios"][i]["categoria"]="Cliente Fiel"
+                print(f"La informacion de {nombre2} ha sido actualizada")
+                return datos
+    return datos
 

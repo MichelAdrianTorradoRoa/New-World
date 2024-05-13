@@ -54,7 +54,7 @@
         }
     ],
     "servicios": [
-        {},
+        
         {
             "nombre": "Sservicios Moviles Postpago",
             "precio": 0,
@@ -72,18 +72,6 @@
             "precio": 0,
             "tiempo": "1 mes",
             "detalles": "60 GB"
-        },
-        {
-            "nombre": "Postpago",
-            "tiempo": "1 mes",
-            "detalles": "60 GB",
-            "precio": 0
-        },
-        {
-            "nombre": "Prepago",
-            "tiempo": "1 mes",
-            "detalles": "60 GB",
-            "precio": 55.9
         }
     ]
 }
