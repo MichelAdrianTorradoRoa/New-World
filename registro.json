@@ -1,11 +1,6 @@
 {
     "usuarios": [
         {
-            "nombre": "Juan Mariño",
-            "direccion": "Bellavista",
-            "informacion de contacto": 0
-        },
-        {
             "nombre": "mike",
             "tipo del documento de identidad": "CC",
             "numero del documento de identidad": 1093292711,
@@ -29,9 +24,66 @@
             "direccion": "Colsag",
             "correo electronico": "vahoma_50@gmail.com",
             "informacion de contacto": 3133338632
+        },
+        {
+            "nombre": "Rosa",
+            "categoria": "Cliente Regular",
+            "tipo del documento de identidad": "TI",
+            "numero del documento de identidad": 1093252712,
+            "direccion": "Magdalena",
+            "correo electronico": "rosa@gmail.com",
+            "informacion de contacto": 3163730476
+        },
+        {
+            "nombre": "Rocky",
+            "categoria": "Cliente Fiel",
+            "tipo del documento de identidad": "CE",
+            "numero del documento de identidad": 1093292712,
+            "direccion": "Miami",
+            "correo electronico": "rocky_lee@gmail.com",
+            "informacion de contacto": 3204445066
+        },
+        {
+            "nombre": "Jayo",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 60301195,
+            "direccion": "Floridablanca",
+            "correo electronico": "jayo@gmail.com",
+            "informacion de contacto": 3053338631
         }
     ],
     "servicios": [
-        {}
+        {},
+        {
+            "nombre": "Sservicios Moviles Postpago",
+            "precio": 0,
+            "tiempo": "",
+            "detalles": "& C:/Users/jesse/AppData/Local/Programs/Python/Python312/python.exe c:/Users/jesse/Documents/PC-main-1/servicios.py"
+        },
+        {
+            "nombre": "Servicios Moviles Postpago",
+            "precio": 0,
+            "tiempo": "1 mes",
+            "detalles": "60 GB"
+        },
+        {
+            "nombre": "Postpago",
+            "precio": 0,
+            "tiempo": "1 mes",
+            "detalles": "60 GB"
+        },
+        {
+            "nombre": "Postpago",
+            "tiempo": "1 mes",
+            "detalles": "60 GB",
+            "precio": 0
+        },
+        {
+            "nombre": "Prepago",
+            "tiempo": "1 mes",
+            "detalles": "60 GB",
+            "precio": 55.9
+        }
     ]
 }
