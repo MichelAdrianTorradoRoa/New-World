@@ -15,6 +15,12 @@ while True:
             opc=pedir_opcion()
             if opc==1:
                 datos=crear_perfiles_usuarios(datos)
+            elif opc==2:
+                datos=leer_usuarios(datos)
+            elif opc==3:
+                datos=actualizar_usarios(datos)
+            elif opc==4:
+                datos=eliminar_usuarios(datos)            
             elif opc == 10:
                 print("Salió!!")
                 break

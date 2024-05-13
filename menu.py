@@ -17,7 +17,7 @@ def menu_Registro_y_Gestión_de_Usuarios():
         print("En este menu se podra hacer las operaciones CRUD y de asignar categorias a los usuarios")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("1. Crear perfiles de usuarios")
-        print["2. Leer los perfiles de los usuarios"]
+        print("2. Leer los perfiles de los usuarios")
         print("3. Actualizar los perfiles de los usuarios")
         print("4. Eliminar perfiles de usuarios")
         print("5. Asignar categorias a los usuarios")

@@ -1,5 +1,4 @@
 import json
-
 def cargar_datos(archivo):
     datos = {}
     with open(archivo,"r") as file:
