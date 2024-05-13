@@ -1,11 +1,6 @@
 {
     "usuarios": [
         {
-            "nombre": "Vanessa",
-            "direccion": "Barrio:Colpet, Calle 5 AN # 4 - 51, Cucuta",
-            "informacion de contacto": 3163730475
-        },
-        {
             "nombre": "Juan Mariño",
             "direccion": "Bellavista",
             "informacion de contacto": 0
@@ -25,6 +20,15 @@
             "direccion": "Cucuta",
             "correo electronico": "vahoma_68@gmail.com",
             "informacion de contacto": "3133338631"
+        },
+        {
+            "nombre": "Ceci",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 60361198,
+            "direccion": "Colsag",
+            "correo electronico": "vahoma_50@gmail.com",
+            "informacion de contacto": 3133338632
         }
     ],
     "servicios": [

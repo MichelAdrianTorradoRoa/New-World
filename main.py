@@ -1,6 +1,7 @@
 from datos import *
 from menu import *
 from usuarios import *
+import unicodedata
 
 BASE_DE_DATOS="registro.json"
 
@@ -26,7 +27,7 @@ while True:
                     menu_Asignar_categorias_a_los_usuarios()
                     opc=pedir_opcion()
                     if opc==1:
-                        print("opcion 1")
+                        datos=cliente_nuevo(datos)
                     elif opc==4:
                         print("Salió!!")
                         break    
