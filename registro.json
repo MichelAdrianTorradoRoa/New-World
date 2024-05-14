@@ -6,7 +6,13 @@
             "numero del documento de identidad": 1093292711,
             "direccion": "Lagos II",
             "correo electronico": "micheltorrado12@gmail.com",
-            "informacion de contacto": 3163730475
+            "informacion de contacto": 3163730475,
+            "historial_uso_servicio": [
+                {
+                    "nombre": "Prepago(Servicios Moviles)",
+                    "fecha": "2023"
+                }
+            ]
         },
         {
             "nombre": "Jorge",
@@ -32,7 +38,13 @@
             "numero del documento de identidad": 1093252712,
             "direccion": "Magdalena",
             "correo electronico": "rosa@gmail.com",
-            "informacion de contacto": 3163730476
+            "informacion de contacto": 3163730476,
+            "interacciones": [
+                {
+                    "tipo": "reclamacion",
+                    "detalle": "Postpago"
+                }
+            ]
         },
         {
             "nombre": "Rocky",
@@ -109,5 +121,8 @@
             "detalles": "12 GB de Navegacion y Minutos Ilimitados",
             "precio": 41000
         }
+    ],
+    "productos": [
+
     ]
 }
