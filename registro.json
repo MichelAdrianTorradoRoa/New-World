@@ -107,7 +107,14 @@
             "nombre": "Claro TV(SERVICIOS DEL HOGAR)",
             "tiempo": "30 DIAS",
             "detalles": "Canales estandar: 102, Canales HD: 68, Emisoras: 7 y Streaming: Claro Video",
-            "precio": 73900
+            "precio": 73900,
+            "ventas": [
+                {
+                    "nombre_usuario": "Jayo",
+                    "nombre_servicio": "Claro TV(SERVICIOS DEL HOGAR)",
+                    "estado": "pendiente"
+                }
+            ]
         },
         {
             "nombre": "Prepago(Servicios Moviles)",
@@ -123,6 +130,20 @@
         }
     ],
     "productos": [
-
+        {
+            "nombre": "Celular",
+            "marca": "Samsung",
+            "referencia": "Galaxy S23 256GB 5G",
+            "cantidad": 20,
+            "valor": 3000000.0,
+            "ventas": [
+                {
+                    "nombre_usuario": "Gaby",
+                    "nombre_producto": "Celular",
+                    "cantidad": 1,
+                    "estado": "Completada"
+                }
+            ]
+        }
     ]
 }
