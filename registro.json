@@ -60,6 +60,16 @@
             "direccion": "Lagos I",
             "correo electronico": "gaby@hotmail.com",
             "informacion de contacto": 3133338632
+        },
+        {
+            "nombre": "Rosa",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 1093252712,
+            "direccion": "rosa@gmail.com",
+            "correo electronico": "Magdalena",
+            "informacion de contacto": 3163730476,
+            "historial_uso_servicio": []
         }
     ],
     "servicios": [
@@ -99,8 +109,5 @@
             "detalles": "12 GB de Navegacion y Minutos Ilimitados",
             "precio": 41000
         }
-    ],
-    "PQRS": [
-        {}
     ]
 }
