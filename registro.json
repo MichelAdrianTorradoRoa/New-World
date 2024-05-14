@@ -43,7 +43,25 @@
                 {
                     "tipo": "reclamacion",
                     "detalle": "Postpago"
+                },
+                {
+                    "tipo": "reclamacion",
+                    "detalle": "Postpago"
                 }
+            ],
+            "servicios_personalizados": [
+                "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                "Television(SERVICIOS DEL HOGAR)",
+                "Telefonia fija(SERVICIOS DEL HOGAR)",
+                "Claro TV(SERVICIOS DEL HOGAR)",
+                "Prepago(Servicios Moviles)",
+                "Postpago(Servicios Moviles)",
+                "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                "Television(SERVICIOS DEL HOGAR)",
+                "Telefonia fija(SERVICIOS DEL HOGAR)",
+                "Claro TV(SERVICIOS DEL HOGAR)",
+                "Prepago(Servicios Moviles)",
+                "Postpago(Servicios Moviles)"
             ]
         },
         {
@@ -62,7 +80,21 @@
             "numero del documento de identidad": 60301195,
             "direccion": "Floridablanca",
             "correo electronico": "jayo@gmail.com",
-            "informacion de contacto": 3053338631
+            "informacion de contacto": 3053338631,
+            "interacciones": [
+                {
+                    "tipo": "solicitud",
+                    "detalle": "Claro TV(SERVICIOS DEL HOGAR)"
+                }
+            ],
+            "servicios_personalizados": [
+                "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                "Television(SERVICIOS DEL HOGAR)",
+                "Telefonia fija(SERVICIOS DEL HOGAR)",
+                "Claro TV(SERVICIOS DEL HOGAR)",
+                "Prepago(Servicios Moviles)",
+                "Postpago(Servicios Moviles)"
+            ]
         },
         {
             "nombre": "Gaby",
@@ -71,7 +103,15 @@
             "numero del documento de identidad": 1093292745,
             "direccion": "Lagos I",
             "correo electronico": "gaby@hotmail.com",
-            "informacion de contacto": 3133338632
+            "informacion de contacto": 3133338632,
+            "servicios_personalizados": [
+                "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                "Television(SERVICIOS DEL HOGAR)",
+                "Telefonia fija(SERVICIOS DEL HOGAR)",
+                "Claro TV(SERVICIOS DEL HOGAR)",
+                "Prepago(Servicios Moviles)",
+                "Postpago(Servicios Moviles)"
+            ]
         },
         {
             "nombre": "Rosa",
@@ -82,6 +122,29 @@
             "correo electronico": "Magdalena",
             "informacion de contacto": 3163730476,
             "historial_uso_servicio": []
+        },
+        {
+            "nombre": "Viki",
+            "categoria": "Cliente Nuevo",
+            "tipo del documento de identidad": "CC",
+            "numero del documento de identidad": 1093292745,
+            "direccion": "Paris",
+            "correo electronico": "viki@hotmail.com",
+            "informacion de contacto": 3163730420,
+            "historial_uso_servicio": [
+                {
+                    "nombre": "Television(SERVICIOS DEL HOGAR)",
+                    "fecha": "No especificada"
+                }
+            ],
+            "servicios_personalizados": [
+                "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                "Television(SERVICIOS DEL HOGAR)",
+                "Telefonia fija(SERVICIOS DEL HOGAR)",
+                "Claro TV(SERVICIOS DEL HOGAR)",
+                "Prepago(Servicios Moviles)",
+                "Postpago(Servicios Moviles)"
+            ]
         }
     ],
     "servicios": [
@@ -89,7 +152,19 @@
             "nombre": "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
             "tiempo": "30 DIAS",
             "detalles": "500 MB de baja y 30 MB de subida",
-            "precio": 165000
+            "precio": 165000,
+            "ventas": [
+                {
+                    "nombre_usuario": "Jorge",
+                    "nombre_servicio": "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                    "estado": "completada"
+                },
+                {
+                    "nombre_usuario": "Rosa",
+                    "nombre_servicio": "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+                    "estado": "completada"
+                }
+            ]
         },
         {
             "nombre": "Television(SERVICIOS DEL HOGAR)",

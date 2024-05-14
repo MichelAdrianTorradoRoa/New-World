@@ -1,6 +1,5 @@
 import unicodedata
 import json
-
 def crear_perfiles_usuarios(datos):
     datos=dict(datos)
     usuario={}
@@ -17,6 +16,7 @@ def crear_perfiles_usuarios(datos):
         usuario["informacion de contacto"] = int(input("Ingrese el numero telefonico: "))
     except Exception:
           usuario["informacion de contacto"] = 0
+    usuario["historial_uso_servicio"] = []      
     datos["usuarios"].append(usuario)
     print("Usuario registrado con éxito!")
     return datos
@@ -97,3 +97,43 @@ def cliente_fiel(datos):
                 return datos
     return datos
 
+def asignar_servicio_a_usuario(datos):
+    nombre_usuario = input("Ingrese el nombre del usuario al que desea asignar el servicio: ")
+    nombre_servicio = input("Ingrese el nombre del servicio que desea asignar: ")
+    fecha_servicio = input("Ingrese la fecha en que se utilizó el servicio (opcional): ")
+
+    for usuario in datos["usuarios"]:
+        if usuario["nombre"] == nombre_usuario:
+            for servicio in datos["servicios"]:
+                if servicio["nombre"] == nombre_servicio:
+                    if "historial_uso_servicio" not in usuario:
+                        usuario["historial_uso_servicio"] = []
+                    usuario["historial_uso_servicio"].append({
+                        "nombre": nombre_servicio,
+                        "fecha": fecha_servicio if fecha_servicio else "No especificada"
+                    })
+                    print(f"Servicio '{nombre_servicio}' asignado correctamente a '{nombre_usuario}'")
+                    return datos
+            print(f"El servicio '{nombre_servicio}' no existe")
+            return datos
+    print(f"El usuario '{nombre_usuario}' no existe")
+    return datos
+
+def registrar_interaccion_usuario(datos):
+    nombre_usuario = input("Ingrese el nombre del usuario con quien se realizó la interacción: ")
+    tipo_interaccion = input("Ingrese el tipo de interacción (consulta, reclamación, sugerencia, etc.): ")
+    detalle_interaccion = input("Ingrese detalles adicionales sobre la interacción: ")
+
+    for usuario in datos["usuarios"]:
+        if usuario["nombre"] == nombre_usuario:
+            if "interacciones" not in usuario:
+                usuario["interacciones"] = []
+            usuario["interacciones"].append({
+                "tipo": tipo_interaccion,
+                "detalle": detalle_interaccion
+            })
+            print(f"Interacción registrada exitosamente para '{nombre_usuario}'")
+            return datos
+
+    print(f"No se encontró ningún usuario con el nombre '{nombre_usuario}'")
+    return datos
