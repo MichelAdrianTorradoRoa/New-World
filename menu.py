@@ -1,11 +1,5 @@
-import datetime
 import unicodedata
 import json
-fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
-
 def menu_principal():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Bienvenido al menu de registro y seguimiento de Claro")
