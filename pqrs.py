@@ -1,23 +1,23 @@
 def consulta(datos):
     datos=dict(datos)
     proceso={}
-    procesos=input("Escriba el proceso que el usuario ha realizado P(peticion), Q(queja), R(reclamo) o S(sugerencia): ")
-    if procesos == "P":
+    proceso=input("Escriba el proceso que el usuario ha realizado P(peticion), Q(queja), R(reclamo) o S(sugerencia): ")
+    if proceso == "P":
         for P in proceso:
-            print (contador, P)
             contador =+ 1
+            print (contador, P)
         return datos
-    elif procesos=="Q":
+    elif proceso=="Q":
         for Q in proceso:
             contador =+ 1
             print (contador, Q)
         return datos
-    elif procesos=="R":
+    elif proceso=="R":
         for R in proceso:
             contador += 1
             print (contador, R)
         return datos
-    elif procesos=="S":
+    elif proceso=="S":
         for S in proceso:
             contador += 1
             print (contador, S)
