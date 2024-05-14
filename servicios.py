@@ -34,10 +34,8 @@ def actualizar_servicio(datos):
 def eliminar_servicios(datos):
     datos = dict(datos)
     servicio2 = input("Ingrese el nombre del servicio que desea eliminar: ")
-    # Normalizar el nombre ingresado
     servicio2_normalizado = unicodedata.normalize("NFKD", servicio2).casefold()
     for i, servicio in enumerate(datos["servicios"]):
-        # Normalizar el nombre del usuario en la lista
         nombre_servicio_normalizado = unicodedata.normalize("NFKD", servicio["nombre"]).casefold()
         if nombre_servicio_normalizado == servicio2_normalizado:
             datos["servicios"].pop(i)
