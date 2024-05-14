@@ -64,28 +64,46 @@
     ],
     "servicios": [
         {
-            "nombre": "Sservicios Moviles Postpago",
-            "precio": 0,
-            "tiempo": "",
-            "detalles": "& C:/Users/jesse/AppData/Local/Programs/Python/Python312/python.exe c:/Users/jesse/Documents/PC-main-1/servicios.py"
+            "nombre": "FIBRA OPTICA(SERVICIOS-HOGAR[INTERNET])",
+            "tiempo": "30 DIAS",
+            "detalles": "500 MB de baja y 30 MB de subida",
+            "precio": 165000
         },
         {
-            "nombre": "Servicios Moviles Postpago",
-            "precio": 0,
-            "tiempo": "1 mes",
-            "detalles": "60 GB"
+            "nombre": "Television(SERVICIOS DEL HOGAR)",
+            "tiempo": "30 DIAS",
+            "detalles": "Total de Canales:311,Canales de Audio y Emisora: 17 y Streaming: Claro Video ",
+            "precio": 85900
         },
         {
-            "nombre": "Postpago",
-            "precio": 0,
-            "tiempo": "1 mes",
-            "detalles": "60 GB"
+            "nombre": "Telefonia fija(SERVICIOS DEL HOGAR)",
+            "tiempo": "30 DIAS",
+            "detalles": "Plan 30 minutos y 4 elegidos ilimitados[Moviles a Claro y Llamadas Locales]",
+            "precio": 52900
         },
         {
-            "nombre": "Prepago",
-            "tiempo": "1 mes",
-            "detalles": "80 GB",
-            "precio": 80.0
+            "nombre": "Claro TV(SERVICIOS DEL HOGAR)",
+            "tiempo": "30 DIAS",
+            "detalles": "Canales estandar: 102, Canales HD: 68, Emisoras: 7 y Streaming: Claro Video",
+            "precio": 73900
+        },
+        {
+            "nombre": "Prepago(Servicios Moviles)",
+            "tiempo": "30 DIAS",
+            "detalles": "100 GB",
+            "precio": 75900
+        },
+        {
+            "nombre": "Postpago(Servicios Moviles)",
+            "tiempo": "30 DIAS",
+            "detalles": "12 GB de Navegacion y Minutos Ilimitados",
+            "precio": 41000
         }
+    ],
+    "PQRS":[
+
+
+
+        
     ]
 }
