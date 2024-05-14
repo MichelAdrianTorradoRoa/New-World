@@ -219,6 +219,34 @@
                     "estado": "Completada"
                 }
             ]
+        },
+        {
+            "nombre": "Lavadora",
+            "marca": "LG",
+            "referencia": "13 Kg Motor Smart Inverter",
+            "cantidad": 10,
+            "valor": 1500000.0
+        },
+        {
+            "nombre": "Port\u00e1til ",
+            "marca": "HP",
+            "referencia": "245 G9 14 AMD R3 + Maleta",
+            "cantidad": 50,
+            "valor": 2300000.0
+        },
+        {
+            "nombre": "Celular",
+            "marca": "Motorola",
+            "referencia": "Moto G84 256GB 5G",
+            "cantidad": 30,
+            "valor": 900000.0
+        },
+        {
+            "nombre": "Equipo Gamer",
+            "marca": "Halcon Series Ryzen 5",
+            "referencia": "Compumax",
+            "cantidad": 5,
+            "valor": 2830000.0
         }
     ]
 }
