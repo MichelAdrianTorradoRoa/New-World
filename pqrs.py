@@ -1,11 +1,11 @@
 def consulta(datos):
     datos=dict(datos)
     proceso={}
+    proceso["nombre"]=input("Ingrese el nombre del usuario que ha realizado un pqrs: ")
     proceso["pqrs"]=input("Escriba el proceso que el usuario ha realizado P(peticion), Q(queja), R(reclamo) o S(sugerencia): ")
     if proceso["pqrs"] == "P":
         for P in proceso:
-            contador =+ 1
-            print (contador, P)
+            print["nombre"]
         return datos
     elif proceso["pqrs"]=="Q":
         for Q in proceso:
