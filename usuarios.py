@@ -1,5 +1,12 @@
 import unicodedata
 import json
+import datetime
+def manejar_excepcion(excepcion):
+    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("errores.txt", "a") as archivo_errores:
+        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
+    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+
 def crear_perfiles_usuarios(datos):
     datos=dict(datos)
     usuario={}
