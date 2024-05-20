@@ -26,6 +26,7 @@ def registrar_venta_producto(datos):
     estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
     hora_de_venta = str(datetime.now().replace(microsecond=0))
 
+  
     for usuario in datos["usuarios"]:
         if usuario["nombre"] == nombre_usuario:
             for producto in datos["productos"]:
@@ -61,7 +62,7 @@ def registrar_venta_servicio(datos):
                         "nombre_usuario": nombre_usuario,
                         "nombre_servicio": nombre_servicio,
                         "estado": estado,
-                        "hora_de_venta":hora_de_venta
+                        "hora_de_venta": hora_de_venta
                     }
                     if "ventas" not in servicio:
                         servicio["ventas"] = []
