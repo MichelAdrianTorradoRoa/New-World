@@ -49,7 +49,7 @@ while True:
                 datos=eliminar_servicios(datos)
             elif opc == 10:
                 print("Salió!!")
-            break
+                break
             
     elif opc==2:
         while True:
@@ -61,7 +61,7 @@ while True:
                 datos=registrar_interaccion_usuario(datos)   
             elif opc == 3:
                 print("Salió!!")
-            break
+                break
     elif opc==3:
         datos=personalizar_servicios(datos)
     elif opc==4:
@@ -80,11 +80,11 @@ while True:
                 ver_historial_ventas(datos)
             elif opcion == 6:
                 print("Salio!!")
-            break
+                break
     elif opc==5:
         datos=generar_informe_servicios_populares(datos)
     elif opc == 6:
         print("Salió!!")
-    break
+        break
 
 guardar_datos(datos, BASE_DE_DATOS)

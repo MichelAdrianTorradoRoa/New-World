@@ -1,3 +1,4 @@
+from datetime import datetime
 def crear_producto(datos):
     datos=dict(datos)
     producto = {}
@@ -23,6 +24,7 @@ def registrar_venta_producto(datos):
     nombre_producto = input("Ingrese el nombre del producto vendido: ")
     cantidad = int(input("Ingrese la cantidad vendida: "))
     estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
+    hora_de_venta = str(datetime.now().replace(microsecond=0))
 
     for usuario in datos["usuarios"]:
         if usuario["nombre"] == nombre_usuario:
@@ -32,7 +34,8 @@ def registrar_venta_producto(datos):
                         "nombre_usuario": nombre_usuario,
                         "nombre_producto": nombre_producto,
                         "cantidad": cantidad,
-                        "estado": estado
+                        "estado": estado,
+                        "hora_de_venta": hora_de_venta
                     }
                     if "ventas" not in producto:
                         producto["ventas"] = []
@@ -48,6 +51,7 @@ def registrar_venta_servicio(datos):
     nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
     nombre_servicio = input("Ingrese el nombre del servicio vendido: ")
     estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
+    hora_de_venta = str(datetime.now().replace(microsecond=0))
 
     for usuario in datos["usuarios"]:
         if usuario["nombre"] == nombre_usuario:
@@ -56,7 +60,8 @@ def registrar_venta_servicio(datos):
                     venta = {
                         "nombre_usuario": nombre_usuario,
                         "nombre_servicio": nombre_servicio,
-                        "estado": estado
+                        "estado": estado,
+                        "hora_de_venta":hora_de_venta
                     }
                     if "ventas" not in servicio:
                         servicio["ventas"] = []
