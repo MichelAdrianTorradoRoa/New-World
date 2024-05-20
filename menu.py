@@ -5,7 +5,7 @@ def menu_principal():
     print("Bienvenido al menu de registro y seguimiento de Claro")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("El Módulo de Usuarios (Administrador) contiene las siguientes opciones: ")
-    print("1. Registro y Gestión de Usuarios")
+    print("1. Registro y Gestión de Usuarios y de Servicios")
     print("2. Seguimiento del Historial de Usuarios")
     print("3. Personalización de Servicios")
     print("4. Gestión de las Ventas")
