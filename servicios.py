@@ -2,8 +2,8 @@ import unicodedata
 import datetime
 def manejar_excepcion(excepcion):
     fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
+    with open("errores.txt", "a") as archivo:
+        archivo.write(f"{fecha_actual}: {excepcion}\n")
     print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
 
 def crear_servicio(datos):
@@ -42,8 +42,8 @@ def actualizar_servicio(datos):
                 datos["servicios"][i][dato_cambiar]=nuevo_valor
                 print(f"La informacion de {servicio2} ha sido actualizada")
             return datos
-    except Exception as e:
-        manejar_excepcion(e)
+    except Exception as n:
+        manejar_excepcion(n)
         return datos    
 
 def eliminar_servicios(datos):
