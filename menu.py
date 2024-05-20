@@ -1,5 +1,13 @@
 import unicodedata
 import json
+import datos
+import datetime
+def manejar_excepcion(excepcion):
+    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("errores.txt", "a") as archivo_errores:
+        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
+    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+
 def menu_principal():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Bienvenido al menu de registro y seguimiento de Claro")
@@ -65,7 +73,8 @@ def pedir_opcion():
         opc = int(input("Ingrese su opción: "))
         print("***************************************")
         return opc
-    except Exception:
+    except Exception as e:
         print("Valor inválido")
         print("***************************************")
-        return -1
+        manejar_excepcion(e)
+        return datos,-1
