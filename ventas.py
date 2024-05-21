@@ -26,35 +26,37 @@ def leer_catalogo_productos(datos):
     for i in range (len(datos["productos"])):
         print (datos["productos"][i])
     return datos
-def registrar_venta_producto(datos):
- try:   
-    datos=dict(datos)
-    nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
-    nombre_producto = input("Ingrese el nombre del producto vendido: ")
-    cantidad = int(input("Ingrese la cantidad vendida: "))
-    estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
-    hora_de_venta = str(datetime.now().replace(microsecond=0))
 
-    for usuario in datos["usuarios"]:
-        if usuario["nombre"] == nombre_usuario:
-            for producto in datos["productos"]:
-                if producto["nombre"] == nombre_producto:
-                    venta = {
-                        "nombre_usuario": nombre_usuario,
-                        "nombre_producto": nombre_producto,
-                        "cantidad": cantidad,
-                        "estado": estado,
-                        "hora_de_venta": hora_de_venta
-                    }
+def registrar_venta_producto(datos):
+    try:
+        datos=dict(datos)
+        nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
+        nombre_producto = input("Ingrese el nombre del producto vendido: ")
+        cantidad = int(input("Ingrese la cantidad vendida: "))
+        estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
+        hora_de_venta = str(datetime.now().replace(microsecond=0))
+        
+        
+        for usuario in datos["usuarios"]:
+            if usuario["nombre"] == nombre_usuario:
+                for producto in datos["productos"]:
+                    if producto["nombre"] == nombre_producto:
+                        venta = {
+                            "nombre_usuario": nombre_usuario,
+                            "nombre_producto": nombre_producto,
+                            "cantidad": cantidad,
+                            "estado": estado,
+                            "hora_de_venta": hora_de_venta
+                        }
                     if "ventas" not in producto:
                         producto["ventas"] = []
                         producto["ventas"].append(venta)
-                    print("Venta registrada exitosamente")
-                    return datos
+                        print("Venta registrada exitosamente")
+                        return datos
 
-    print("No se pudo registrar la venta. Verifique el nombre del usuario y del producto.")
-    return datos
- except Exception:
+        print("No se pudo registrar la venta. Verifique el nombre del usuario y del producto.")
+        return datos
+    except Exception:
         ahora = datetime.datetime.now()
         dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
         mensaje = "Fallo en registrar vental de un producto"
