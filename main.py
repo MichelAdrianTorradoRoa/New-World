@@ -39,7 +39,7 @@ while True:
                         datos=cliente_fiel(datos)         
                     elif opc==4:
                         print("Salió!!")
-                    break
+                        break
             elif opc==6:
                 datos=crear_servicio(datos)
             elif opc==7:
