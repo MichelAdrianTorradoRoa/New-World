@@ -3,7 +3,7 @@ import json
 import datos
 import datetime
 
-file = open("fallos.txt", "r")
+file = open("errores.txt", "r")
 print(file.read)
 file.close()
 
