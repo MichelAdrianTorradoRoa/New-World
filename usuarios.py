@@ -44,75 +44,110 @@ def leer_usuarios(datos):
     return datos       
     
 def actualizar_usarios(datos):
-    datos=dict(datos)
-    nombre2= input("Ingrese el nombre del usuario que desea actualizar: ")
-    dato_cambiar=input("Ingrese el dato que desea cambiar: ")
-    nuevo_valor=input("Ingrese el nuevo dato: ")
-    for i in range (len(datos["usuarios"])):
-         if datos["usuarios"][i]["nombre"]==nombre2:
+    try:
+      datos=dict(datos)
+      nombre2= input("Ingrese el nombre del usuario que desea actualizar: ")
+      dato_cambiar=input("Ingrese el dato que desea cambiar: ")
+      nuevo_valor=input("Ingrese el nuevo dato: ")
+      for i in range (len(datos["usuarios"])):
+          if datos["usuarios"][i]["nombre"]==nombre2:
             datos["usuarios"][i][dato_cambiar]=nuevo_valor
             print(f"La informacion de {nombre2} ha sido actualizada")
-    return datos
+      return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en actualizar usuario"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
 def eliminar_usuarios(datos):
-    datos = dict(datos)
-    nombre2 = input("Ingrese el nombre del usuario que desea eliminar: ")
-    # Normalizar el nombre ingresado
-    nombre2_normalizado = unicodedata.normalize("NFKD", nombre2).casefold()
-    for i, usuario in enumerate(datos["usuarios"]):
+    try:
+       datos = dict(datos)
+       nombre2 = input("Ingrese el nombre del usuario que desea eliminar: ")
+       # Normalizar el nombre ingresado
+       nombre2_normalizado = unicodedata.normalize("NFKD", nombre2).casefold()
+       for i, usuario in enumerate(datos["usuarios"]):
         # Normalizar el nombre del usuario en la lista
         nombre_usuario_normalizado = unicodedata.normalize("NFKD", usuario["nombre"]).casefold()
         if nombre_usuario_normalizado == nombre2_normalizado:
             datos["usuarios"].pop(i)
             print("Usuario eliminado")
             return datos
-    print("El usuario no existe")
-    return datos        
-
+        print("El usuario no existe")
+        return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en eliminar usuario"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")           
 
 def cliente_nuevo(datos):
-    datos=dict(datos)
-    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente nuevo: ")
-    for i in range (len(datos["usuarios"])):
-        if datos["usuarios"][i]["nombre"]==nombre2:
-            if datos["usuarios"][i]["categoria"]=="Cliente Nuevo":
+    try:
+       datos=dict(datos)
+       nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente nuevo: ")
+       for i in range (len(datos["usuarios"])):
+           if datos["usuarios"][i]["nombre"]==nombre2:
+               if datos["usuarios"][i]["categoria"]=="Cliente Nuevo":
                 print("El usuario ya es cliente nuevo")
                 return datos
-            else:
+               else:
                 datos["usuarios"][i]["categoria"]="Cliente Nuevo"
                 print(f"La informacion de {nombre2} ha sido actualizada")
                 return datos
-    return datos
+           return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en asignarlo como cliente nuevo"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")   
 
 def cliente_regular(datos):
-    datos=dict(datos)
-    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente regular: ")
-    for i in range (len(datos["usuarios"])):
-        if datos["usuarios"][i]["nombre"]==nombre2:
-            if datos["usuarios"][i]["categoria"]=="Cliente Regular":
-                print("El usuario ya es cliente regular")
-                return datos
-            else:
-                datos["usuarios"][i]["categoria"]="Cliente Regular"
-                print(f"La informacion de {nombre2} ha sido actualizada")
-                return datos
-    return datos
+    try:
+        datos=dict(datos)
+        nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente regular: ")
+        for i in range (len(datos["usuarios"])):
+            if datos["usuarios"][i]["nombre"]==nombre2:
+                if datos["usuarios"][i]["categoria"]=="Cliente Regular":
+                    print("El usuario ya es cliente regular")
+                    return datos
+                else:
+                    datos["usuarios"][i]["categoria"]="Cliente Regular"
+                    print(f"La informacion de {nombre2} ha sido actualizada")
+                    return datos
+            return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en asignarlo como cliente regular"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
 def cliente_fiel(datos):
-    datos=dict(datos)
-    nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente fiel: ")
-    for i in range (len(datos["usuarios"])):
-        if datos["usuarios"][i]["nombre"]==nombre2:
-            if datos["usuarios"][i]["categoria"]=="Cliente Fiel":
-                print("El usuario ya es cliente fiel")
-                return datos
-            else:
-                datos["usuarios"][i]["categoria"]="Cliente Fiel"
-                print(f"La informacion de {nombre2} ha sido actualizada")
-                return datos
-    return datos
+    try:
+        datos=dict(datos)
+        nombre2=input("Ingrese el nombre del usuario que desea asignarlo como cliente fiel: ")
+        for i in range (len(datos["usuarios"])):
+            if datos["usuarios"][i]["nombre"]==nombre2:
+                if datos["usuarios"][i]["categoria"]=="Cliente Fiel":
+                    print("El usuario ya es cliente fiel")
+                    return datos
+                else:
+                    datos["usuarios"][i]["categoria"]="Cliente Fiel"
+                    print(f"La informacion de {nombre2} ha sido actualizada")
+                    return datos
+            return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en asignarlo como cliente fiel"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")    
 
 def asignar_servicio_a_usuario(datos):
+ try:
     nombre_usuario = input("Ingrese el nombre del usuario al que desea asignar el servicio: ")
     nombre_servicio = input("Ingrese el nombre del servicio que desea asignar: ")
     fecha_servicio = input("Ingrese la fecha en que se utilizó el servicio (opcional): ")
@@ -133,8 +168,15 @@ def asignar_servicio_a_usuario(datos):
             return datos
     print(f"El usuario '{nombre_usuario}' no existe")
     return datos
+ except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en asignar servicio a usuario"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
 def registrar_interaccion_usuario(datos):
+ try:   
     nombre_usuario = input("Ingrese el nombre del usuario con quien se realizó la interacción: ")
     tipo_interaccion = input("Ingrese el tipo de interacción (consulta, reclamación, sugerencia, etc.): ")
     detalle_interaccion = input("Ingrese detalles adicionales sobre la interacción: ")
@@ -152,3 +194,9 @@ def registrar_interaccion_usuario(datos):
 
     print(f"No se encontró ningún usuario con el nombre '{nombre_usuario}'")
     return datos
+ except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en registrar la interraccion del usuario"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")

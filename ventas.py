@@ -27,6 +27,7 @@ def leer_catalogo_productos(datos):
         print (datos["productos"][i])
     return datos
 def registrar_venta_producto(datos):
+ try:   
     datos=dict(datos)
     nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
     nombre_producto = input("Ingrese el nombre del producto vendido: ")
@@ -34,7 +35,6 @@ def registrar_venta_producto(datos):
     estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
     hora_de_venta = str(datetime.now().replace(microsecond=0))
 
-  
     for usuario in datos["usuarios"]:
         if usuario["nombre"] == nombre_usuario:
             for producto in datos["productos"]:
@@ -54,8 +54,15 @@ def registrar_venta_producto(datos):
 
     print("No se pudo registrar la venta. Verifique el nombre del usuario y del producto.")
     return datos
+ except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en registrar vental de un producto"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
 def registrar_venta_servicio(datos):
+ try:   
     datos=dict(datos)
     nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
     nombre_servicio = input("Ingrese el nombre del servicio vendido: ")
@@ -80,8 +87,14 @@ def registrar_venta_servicio(datos):
 
     print("No se pudo registrar la venta. Verifique el nombre del usuario y del servicio.")
     return datos
+ except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en registrar venta de un servicio"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
-def ver_historial_ventas(datos):
+def ver_historial_ventas(datos):  
     datos=dict(datos)
     print("Historial de Ventas:")
     for producto in datos["productos"]:
