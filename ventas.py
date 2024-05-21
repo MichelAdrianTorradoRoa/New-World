@@ -1,18 +1,20 @@
 from datetime import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+from errores import *
     
 def crear_producto(datos):
-    datos=dict(datos)
-    producto = {}
-    producto["nombre"] = input("Ingrese el nombre del producto: ")
-    producto["marca"] = input("Ingrese la marca del producto: ")
-    producto["referencia"] = input("Ingrese la referencia del producto: ")
-    producto["cantidad"] = int(input("Ingrese la cantidad disponible: "))
-    producto["valor"] = float(input("Ingrese el valor del producto: "))
+    try:
+       datos=dict(datos)
+       producto = {}
+       producto["nombre"] = input("Ingrese el nombre del producto: ")
+       producto["marca"] = input("Ingrese la marca del producto: ")
+       producto["referencia"] = input("Ingrese la referencia del producto: ")
+       producto["cantidad"] = int(input("Ingrese la cantidad disponible: "))
+       producto["valor"] = int(input("Ingrese el valor del producto: "))
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en crear producto"
+        guardar_txt(dato, mensaje)
 
     datos["productos"].append(producto)
     print("Producto registrado exitosamente!")

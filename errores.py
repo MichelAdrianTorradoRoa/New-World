@@ -1,3 +1,4 @@
+import datetime
 file = open("errores.txt", "r")
 print(file.read)
 file.close()

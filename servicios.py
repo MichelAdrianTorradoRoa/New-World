@@ -1,10 +1,6 @@
 import unicodedata
 import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo:
-        archivo.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+from errores import *
 
 def crear_servicio(datos):
     try:
@@ -17,13 +13,23 @@ def crear_servicio(datos):
             servicio["precio"] = int(input("Ingrese el precio del servicio: "))
         except Exception:
             servicio["precio"] = 0
+            ahora = datetime.datetime.now()
+            dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+            mensaje = "Fallo en crear servicio(precio)"
+            guardar_txt(dato, mensaje)
+            print("valor invalido")
+        
         datos["servicios"].append(servicio)
         print("Servicio registrado con éxito!")
         return datos
-    except Exception as e:
-        manejar_excepcion(e)
-        return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en crear servicio(menos precio)"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
+      
 def leer_servicio(datos):
     datos=dict(datos)
     print("Los servicios que se encuentran en Claro")
@@ -42,9 +48,12 @@ def actualizar_servicio(datos):
                 datos["servicios"][i][dato_cambiar]=nuevo_valor
                 print(f"La informacion de {servicio2} ha sido actualizada")
             return datos
-    except Exception as n:
-        manejar_excepcion(n)
-        return datos    
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en actualizar servicio"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
 def eliminar_servicios(datos):
     try:
@@ -59,6 +68,9 @@ def eliminar_servicios(datos):
                 return datos
         print("El servicio no existe")
         return datos
-    except Exception as e:
-        manejar_excepcion(e)
-        return datos       
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en eliminar servicio"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")

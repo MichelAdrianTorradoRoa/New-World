@@ -1,9 +1,5 @@
 import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+from errores import *
 def generar_informe_servicios_populares(datos):
     try:
         datos=dict(datos)
@@ -18,6 +14,10 @@ def generar_informe_servicios_populares(datos):
         for servicio, cantidad in servicios_populares_ordenados:
             print(f"{servicio}: {cantidad} ventas")
         return datos
-    except Exception as e:
-        manejar_excepcion(e)
-        return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en reportes"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
+   

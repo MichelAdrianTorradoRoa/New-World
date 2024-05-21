@@ -1,11 +1,7 @@
 import unicodedata
 import json
 import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+from errores import *
 
 def crear_perfiles_usuarios(datos):
     datos=dict(datos)
@@ -16,13 +12,25 @@ def crear_perfiles_usuarios(datos):
     try:
         usuario["numero del documento de identidad"] = int(input("Ingrese el numero de identidad: "))
     except Exception:
-          usuario["informacion de contacto"] = 0
+          usuario["numero del documento de identidad"] = 0
+          ahora = datetime.datetime.now()
+          dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+          mensaje = "Fallo en crear usuario(numero ID)"
+          guardar_txt(dato, mensaje)
+          print("valor invalido")
+
     usuario["direccion"]=input("Ingrese la direccion del usuario: ")
     usuario["correo electronico"]=input("Ingrese el correo electronico: ")
     try:
         usuario["informacion de contacto"] = int(input("Ingrese el numero telefonico: "))
     except Exception:
           usuario["informacion de contacto"] = 0
+          ahora = datetime.datetime.now()
+          dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+          mensaje = "Fallo en crear usuario"
+          guardar_txt(dato, mensaje)
+          print("valor invalido")
+
     usuario["historial_uso_servicio"] = []      
     datos["usuarios"].append(usuario)
     print("Usuario registrado con éxito!")

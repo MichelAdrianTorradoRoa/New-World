@@ -1,11 +1,7 @@
 import unicodedata
 import json
 import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+from errores import *
 
 def personalizar_servicios(datos):
     try:
@@ -39,6 +35,9 @@ def personalizar_servicios(datos):
                 return datos
         print("El usuario no fue encontrado.")
         return datos
-    except Exception as e:
-        manejar_excepcion(e)
-        return datos
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en personalizar"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
