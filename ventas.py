@@ -28,13 +28,20 @@ def leer_catalogo_productos(datos):
     return datos
 
 def registrar_venta_producto(datos):
-    try:
         datos=dict(datos)
         nombre_usuario = input("Ingrese el nombre del usuario que realizó la compra: ")
         nombre_producto = input("Ingrese el nombre del producto vendido: ")
-        cantidad = int(input("Ingrese la cantidad vendida: "))
+        try:
+            cantidad = int(input("Ingrese la cantidad vendida: "))
+        except Exception:
+            ahora = datetime.datetime.now()
+            dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+            mensaje = "Fallo en registrar venta de un producto"
+            guardar_txt(dato, mensaje)
+            print("valor invalido")    
+        
         estado = input("Ingrese el estado de la venta (pendiente, completada, cancelada, etc.): ")
-        hora_de_venta = str(datetime.now().replace(microsecond=0))
+        hora_de_venta = (datetime.datetime.now().replace(microsecond=0))
         
         
         for usuario in datos["usuarios"]:
@@ -53,15 +60,9 @@ def registrar_venta_producto(datos):
                         producto["ventas"].append(venta)
                         print("Venta registrada exitosamente")
                         return datos
-
-        print("No se pudo registrar la venta. Verifique el nombre del usuario y del producto.")
-        return datos
-    except Exception:
-        ahora = datetime.datetime.now()
-        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
-        mensaje = "Fallo en registrar venta de un producto"
-        guardar_txt(dato, mensaje)
-        print("valor invalido")
+                print("No se pudo registrar la venta. Verifique el nombre del usuario y del producto.")
+                return datos
+    
 
 def registrar_venta_servicio(datos):
  try:   
