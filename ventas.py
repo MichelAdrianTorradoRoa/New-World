@@ -48,7 +48,7 @@ def registrar_venta_producto(datos):
                     }
                     if "ventas" not in producto:
                         producto["ventas"] = []
-                    producto["ventas"].append(venta)
+                        producto["ventas"].append(venta)
                     print("Venta registrada exitosamente")
                     return datos
 
@@ -81,7 +81,7 @@ def registrar_venta_servicio(datos):
                     }
                     if "ventas" not in servicio:
                         servicio["ventas"] = []
-                    servicio["ventas"].append(venta)
+                        servicio["ventas"].append(venta)
                     print("Venta registrada exitosamente")
                     return datos
 
