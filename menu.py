@@ -1,18 +1,7 @@
-import unicodedata
 import json
 import datos
 import datetime
-
-file = open("errores.txt", "r")
-print(file.read)
-file.close()
-
-
-def guardar_txt(dato, mensaje): 
-    dato_c = dato + " " + mensaje
-    with open("errores.txt", "a") as file:
-        file.write(dato_c + '\n')
-    file.close()
+from errores import *
 
 def menu_principal():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")

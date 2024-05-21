@@ -5,6 +5,7 @@ from servicios import *
 from ventas import *
 from reportes import *
 from personalizar import *
+from errores import *
 import unicodedata
 
 BASE_DE_DATOS="registro.json"
