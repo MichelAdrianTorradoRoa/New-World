@@ -29,3 +29,5 @@
 2024-05-21 16:25:18 Fallo en registrar vental de un producto
 2024-05-21 16:29:00 Fallo en menu
 2024-05-21 16:29:29 Fallo en registrar vental de un producto
+2024-05-21 16:30:27 Fallo en menu
+2024-05-21 16:30:47 Fallo en registrar vental de un producto

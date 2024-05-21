@@ -59,7 +59,7 @@ def registrar_venta_producto(datos):
     except Exception:
         ahora = datetime.datetime.now()
         dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
-        mensaje = "Fallo en registrar vental de un producto"
+        mensaje = "Fallo en registrar venta de un producto"
         guardar_txt(dato, mensaje)
         print("valor invalido")
 
