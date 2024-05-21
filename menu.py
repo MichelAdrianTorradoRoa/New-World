@@ -2,11 +2,17 @@ import unicodedata
 import json
 import datos
 import datetime
-def manejar_excepcion(excepcion):
-    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("errores.txt", "a") as archivo_errores:
-        archivo_errores.write(f"{fecha_actual}: {excepcion}\n")
-    print("Se ha producido un error. Consulte el archivo de errores para más detalles.")
+
+file = open("fallos.txt", "r")
+print(file.read)
+file.close()
+
+
+def guardar_txt(dato, mensaje): 
+    dato_c = dato + " " + mensaje
+    with open("fallos.txt", "a") as file:
+        file.write(dato_c + '\n')
+    file.close()
 
 def menu_principal():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -73,8 +79,13 @@ def pedir_opcion():
         opc = int(input("Ingrese su opción: "))
         print("***************************************")
         return opc
-    except Exception as e:
-        print("Valor inválido")
-        print("***************************************")
-        manejar_excepcion(e)
-        return datos,-1
+    except Exception:
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en menu"
+        guardar_txt(dato, mensaje)
+        print("--"*20)
+        print("valor invalido")
+    
+
+
