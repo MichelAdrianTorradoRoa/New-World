@@ -20,3 +20,6 @@
 2024-05-21 15:56:48 Fallo en crear usuario(numero ID)
 2024-05-21 15:56:49 Fallo en crear usuario
 2024-05-21 15:59:20 Fallo en menu
+2024-05-21 16:19:46 Fallo en menu
+2024-05-21 16:20:36 Fallo en registrar vental de un producto
+2024-05-21 16:22:03 Fallo en registrar venta de un servicio
