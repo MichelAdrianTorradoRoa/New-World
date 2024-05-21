@@ -2,35 +2,34 @@ import unicodedata
 import json
 import datetime
 from errores import *
-while True:
-    def crear_perfiles_usuarios(datos):
-        datos=dict(datos)
-        usuario={}
-        usuario["nombre"]=input("Ingrese el nombre del usuario: ")
-        usuario["categoria"]=("Cliente Nuevo")
-        usuario["tipo del documento de identidad"]=input("Ingrese el tipo del documento de identidad: ")
-        try:
-           usuario["numero del documento de identidad"] = int(input("Ingrese el numero de identidad: "))
-        except Exception:
-            usuario["numero del documento de identidad"] = 0
-            ahora = datetime.datetime.now()
-            dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
-            mensaje = "Fallo en crear usuario(numero ID)"
-            guardar_txt(dato, mensaje)
-            print("valor invalido")
+def crear_perfiles_usuarios(datos):
+    datos=dict(datos)
+    usuario={}
+    usuario["nombre"]=input("Ingrese el nombre del usuario: ")
+    usuario["categoria"]=("Cliente Nuevo")
+    usuario["tipo del documento de identidad"]=input("Ingrese el tipo del documento de identidad: ")
+    try:
+       usuario["numero del documento de identidad"] = int(input("Ingrese el numero de identidad: "))
+    except Exception:
+        usuario["numero del documento de identidad"] = 0
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en crear usuario(numero ID)"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
 
-        usuario["direccion"]=input("Ingrese la direccion del usuario: ")
-        usuario["correo electronico"]=input("Ingrese el correo electronico: ")
-        try:
-            usuario["informacion de contacto"] = int(input("Ingrese el numero telefonico: "))
-        except Exception:
-            usuario["informacion de contacto"] = 0
-            ahora = datetime.datetime.now()
-            dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
-            mensaje = "Fallo en crear usuario"
-            guardar_txt(dato, mensaje)
-            print("valor invalido")
-            m="Valor invalido"
+    usuario["direccion"]=input("Ingrese la direccion del usuario: ")
+    usuario["correo electronico"]=input("Ingrese el correo electronico: ")
+    try:
+        usuario["informacion de contacto"] = int(input("Ingrese el numero telefonico: "))
+    except Exception:
+        usuario["informacion de contacto"] = 0
+        ahora = datetime.datetime.now()
+        dato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        mensaje = "Fallo en crear usuario"
+        guardar_txt(dato, mensaje)
+        print("valor invalido")
+        m="Valor invalido"
         if m=="Fallo en crear usuario":
             print("Revisar")
             return datos
@@ -39,7 +38,6 @@ while True:
             datos["usuarios"].append(usuario)
             print("Usuario registrado con éxito!")
             return datos
-    break
 
 
 def leer_usuarios(datos):
